@@ -1,0 +1,11 @@
+{
+	"dir" : { 
+		"devDir" : "../B2B.UI/Content/en/",
+		"jsDir" : "Scripts/webpack/",
+		"cssSDir" : "Themes/webpack/"
+	},
+	"version" : {
+		"default" : "13439",
+		"addition" : "0"
+	}
+}
