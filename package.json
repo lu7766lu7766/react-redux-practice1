@@ -15,7 +15,10 @@
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
     "react-redux": "^4.4.6",
-    "redux": "^3.6.0"
+    "redux": "^3.6.0",
+    "rimraf": "^2.5.4",
+    "xml-query": "^1.4.0",
+    "xml-reader": "^2.4.3"
   },
   "devDependencies": {
     "babel": "^6.5.2",
