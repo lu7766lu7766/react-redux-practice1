@@ -3,13 +3,13 @@ import { connect } from "react-redux";
 
 class Choicer extends Component {
 	render() {
-		const {student_id, onChoiceChange} = this.props;
+		const {student_id, onChange} = this.props;
 		const choice_list = ["",1,2,3,4,5,6,7,8,9];
-		console.log(student_id+"^^");
+		//console.log(student_id+"^^");
 		return (
-			<select onChange={(e) => onChoiceChange(e.target.value)}>
+			<select onChange={(e) => onChange(e.target.value)} value={student_id}>
 				{
-					choice_list.map( x => <option value={x} selected={x==student_id}>{x==""?"All":x}</option>)
+					choice_list.map( x => <option value={x}>{x==""?"All":x}</option>)
 				}
 			</select>
 		);
@@ -22,9 +22,10 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = (dispatch) => {
 	return {
-		onChoiceChange: (id) => {
-			// console.log(id)
-			if (id == "0") {
+		onChange: (id) => {
+			// console.log(id) 
+			if (id == "") 
+			{
 				dispatch({ type: "ALL" })
 			}
 			else {
