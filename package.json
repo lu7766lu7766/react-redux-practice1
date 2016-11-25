@@ -1,14 +1,13 @@
 {
   "name": "jw1z",
   "version": "1.0.0",
-  "author": "B2B.UI",
-  "description": "B2B.UI.JSEnv",
+  "author": "jw1z",
+  "description": "B2B.UI.Webpack",
   "main": "index.js",
   "keywords": [
-    "B2B.UI.JSEnv"
+    "B2B.UI.Webpack"
   ],
   "dependencies": {
-    "bootstrap": "^3.3.7",
     "config": "^1.24.0",
     "jquery": "^3.1.1",
     "lodash": "^4.17.2",
