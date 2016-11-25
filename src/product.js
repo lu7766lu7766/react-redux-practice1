@@ -5,6 +5,7 @@ import { Provider } from "react-redux";
 import Store from "./store";
 
 import Choicer from "./components/choicer";
+import Editor from "./components/editor";
 import StudentsList from "./components/students-list";
 import ProductTest from "./components/product-test";
 
@@ -17,6 +18,7 @@ window.onload = function () {
 		<Provider store={Store}>
 			<div>
 				<Choicer />
+				<Editor />
 				<StudentsList />
 				hello product<br />
 				<ProductTest />

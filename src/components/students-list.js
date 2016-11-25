@@ -31,7 +31,7 @@ class StudentsList extends Component {
 }
 
 let mapStateToProps = state => {
-	return { students: state.students };
+	return { students: state.students.list };
 }
 
 export default connect(mapStateToProps)(StudentsList);

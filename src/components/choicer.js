@@ -1,28 +1,23 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 
-class choicer extends Component {
+class Choicer extends Component {
 	render() {
-		const {onChoiceChange} = this.props;
+		const {student_id, onChoiceChange} = this.props;
+		const choice_list = ["",1,2,3,4,5,6,7,8,9];
+		console.log(student_id+"^^");
 		return (
 			<select onChange={(e) => onChoiceChange(e.target.value)}>
-				<option value="0">All</option>
-				<option value="1">1</option>
-				<option value="2">2</option>
-				<option value="3">3</option>
-				<option value="4">4</option>
-				<option value="5">5</option>
-				<option value="6">6</option>
-				<option value="7">7</option>
-				<option value="8">8</option>
-				<option value="9">9</option>
+				{
+					choice_list.map( x => <option value={x} selected={x==student_id}>{x==""?"All":x}</option>)
+				}
 			</select>
 		);
 	}
 }
 
-let mapStateToProps = state => {
-	return {};
+const mapStateToProps = state => {
+	return { student_id : state.students.student_id };
 }
 
 const mapDispatchToProps = (dispatch) => {
@@ -39,4 +34,4 @@ const mapDispatchToProps = (dispatch) => {
 	}
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(choicer);
+export default connect(mapStateToProps, mapDispatchToProps)(Choicer);
